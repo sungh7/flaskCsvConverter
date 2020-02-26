@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>SVHN Model as a Flask API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>Flask And Image to Table Converter</h1>
+<div class="agile-its">
+    <h2>Flask Image to Table</h2>
+    <div class="w3layouts">
+        <div class="photos-upload-view">
+            <form id="upload" action="/upload" method=post  enctype="multipart/form-data">
+                <div class="upload-btn-wrapper">
+                    <button class="btn">이미지 선택</button>
+                    <input type=file name=file value='이미지 선택'>
+                </div>
+                <div>
+                    
+                </div>
+                <input type="submit"  value="Table Download">
+                <br>
+                {% if label %}
+                    <span class="result_lable">
+                        {{ label }}
+                    </span>
+                {% endif %}
+            </form>
+        
+                
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+
+</html>
