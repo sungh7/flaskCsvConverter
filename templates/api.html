@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>A Flask API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>Flask</h1>
+<div class="agile-its">
+    <h2>Flask Image to Table</h2>
+      <div class="w3layouts">
+        <div class="photos-upload-view">
+            <form id="test" action="/test">
+                <span class="input-group-addon">Please select</span>
+                <select name="comp_select" class="selectpicker form-control">
+                  {% for o in data %}
+                  <option value="{{ o.name }}">{{ o.name }}</option>
+                  {% endfor %}
+                </select>
+      
+        </div>
+        <button type="submit" class="btn btn-default">Go</button>
+      </div>
+    </form>        
+  
+
+</div>
+</body>
+
+</html>
