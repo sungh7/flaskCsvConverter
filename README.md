@@ -1,6 +1,10 @@
 ### README.md
 
-nginx setting
+conda env create -f conda_requirements.txt
+pip3 install -r requirements.txt
+
+
+# nginx setting
 
 rm /etx/nginx/sites-available/default
 re /etc/nignx/sites-enabled/default
