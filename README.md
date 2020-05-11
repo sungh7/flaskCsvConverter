@@ -8,10 +8,12 @@ pip3 install -r requirements.txt
 # nginx setting
 
 rm /etx/nginx/sites-available/default
-re /etc/nignx/sites-enabled/default
+
+rm /etc/nignx/sites-enabled/default
 
 vi /etc/nginx/sites-available/nginx-test
 
+{
 server{	
 	listen 80;
 	server_name ;
@@ -29,8 +31,8 @@ server{
         location /static{
                 alias /mnt/c/project/flask_csv_convert/static;
                 proxy_pass http://127.0.0.1:8000;
-        }
-
+      }
+}
 sudo ln -s /etc/nginx/sites-available/nginx-test /etc/nginx/sites-enabled/
 
 sudo service nginx restart
