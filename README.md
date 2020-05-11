@@ -13,8 +13,9 @@ rm /etc/nignx/sites-enabled/default
 
 vi /etc/nginx/sites-available/nginx-test
 
-{
-server{	
+
+
+	server{	
 	listen 80;
 	server_name ;
 	root /mnt/c/project/flask_csv_convert;
@@ -31,8 +32,8 @@ server{
         location /static{
                 alias /mnt/c/project/flask_csv_convert/static;
                 proxy_pass http://127.0.0.1:8000;
-      }
-}
+        }
+
 sudo ln -s /etc/nginx/sites-available/nginx-test /etc/nginx/sites-enabled/
 
 sudo service nginx restart
